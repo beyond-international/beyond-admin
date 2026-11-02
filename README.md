@@ -12,7 +12,7 @@
 ## 置き場と URL
 
 - 開発中：蒲澤の GitHub の公開リポジトリ `beyond-admin` に、このフォルダの中身をそのまま置き、GitHub Pages（main ブランチ／root）で公開する
-  - URL：`https://shinobukamasawa.github.io/beyond-admin/`
+  - URL：`https://beyond-international.github.io/beyond-admin/`（2026-11-02 に組織 beyond-international へ移管。10/16〜11/2 は shinobukamasawa.github.io）
   - 送り方：`npm run deploy:admin`（git subtree push）。数分で反映。ブラウザのキャッシュが残るときは index.html の `?v=` を進める
 - 画面の URL は、Edge Function の秘密情報 `ADMIN_ORIGINS`（CORS）と、Supabase Auth の Redirect URLs の両方に入っていること
 - 納品時：beyond.english.system の GitHub アカウントへ移管し、URL を差し替える（web/ と同じ）
