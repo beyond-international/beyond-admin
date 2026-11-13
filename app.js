@@ -435,7 +435,7 @@
     $('#new').onclick = function () { teacherDialog('', reload); };
     $('#cal').onclick = function () {
       var btn = $('#cal');
-      confirmBox('カレンダーを作成・共有', 'カレンダーが未作成の有効な先生について、専用カレンダーを作ります。Google アカウントが入っている先生には、専用カレンダー（変更可）と担当店舗の全体カレンダー（閲覧）を共有します。\n共有した先生には Google から通知メールが届きます。', '実行する').then(function (yes) {
+      confirmBox('カレンダーを作成・共有', 'カレンダーが未作成の有効な先生について、専用カレンダーを作ります。Google アカウントが入っている先生には、専用カレンダーと担当店舗の全体カレンダーを、どちらも「閲覧」で共有します（予定の変更はできません）。\n共有した先生には Google から通知メールが届きます。', '実行する').then(function (yes) {
         if (!yes) return; busy(btn, true);
         api('teachers.calendars', {}).then(function (r) { busy(btn, false); if (!r.ok) { toast(r.error, 'err'); return; } toast(r.message + (r.notes.length ? '\n' + r.notes.join('\n') : '')); reload(); });
       });
